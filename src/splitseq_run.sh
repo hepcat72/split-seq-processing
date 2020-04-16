@@ -18,6 +18,12 @@ raw_samples=("${all_args[@]:5}")
 sample_args=""
 for n in "${raw_samples[@]}"
   do
+    #Allow samples' wells string to be a single well
+    if [ `echo "${n}" | cut -d ' ' -f 2 | grep -c -E '[-:]'` -eq 0 ]; then
+      name=`echo "${n}" | cut -d ' ' -f 1`
+      well=`echo "${n}" | cut -d ' ' -f 2`
+      n="$name ${well}-${well}"
+    fi
     sample_args="${sample_args} --sample ${n}"
   done
 

@@ -14,6 +14,13 @@ ssrefdir=$3
 libdirs="$4"
 sample_wells=("${all_args[@]:4}")
 
+#Allow the sample's wells string to be a single well
+if [ `echo "${sample_wells}" | cut -d ' ' -f 2 | grep -c -E '[-:]'` -eq 0 ]; then
+  name=`echo "${sample_wells}" | cut -d ' ' -f 1`
+  well=`echo "${sample_wells}" | cut -d ' ' -f 2`
+  sample_wells="$name ${well}-${well}"
+fi
+
 mkdir "${run_id}"
 
 split-seq combine \
