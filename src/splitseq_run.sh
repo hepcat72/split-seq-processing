@@ -14,6 +14,17 @@ ssrefdir=$5
 raw_samples=("${all_args[@]:5}")
 
 
+#Gzip the inputs if not gzipped (a splitseq requirement)
+if [ ${mrna_fq: -3} != ".gz" ]; then
+  gzip $mrna_fq
+  mrna_fq=${mrna_fq}.gz
+fi
+if [ ${bcumi_fq: -3} != ".gz" ]; then
+  gzip $bcumi_fq
+  bcumi_fq=${bcumi_fq}.gz
+fi
+
+
 #Build the sample arguments, e.g. `--sample name A1:B6 --sample B7:C12`
 sample_args=""
 if [ $# -gt 5 ]; then
