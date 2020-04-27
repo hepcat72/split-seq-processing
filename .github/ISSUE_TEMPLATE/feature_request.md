@@ -1,3 +1,12 @@
+---
+name: Feature request
+about: Feature
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 **Feature**
 
 A bird's-eye summation of what the feature is.
