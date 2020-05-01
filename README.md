@@ -38,15 +38,25 @@ These scripts must be run using the conda environment created in the install pro
 
 This repo contains the details necessary to install the split-seq-pipeline's dependencies and scripts to both run the split-seq-pipeline and post-process its output.
 
-To install this module type the following:
+To install this module system-wide, type the following:
 
     git clone https://github.com/hepcat72/split-seq-processing.git
     cd split-seq-processing
     perl Makefile.PL
     make
+    sudo make install
+
+To install this module in your user account, replace the perl command above with:
+
+    git clone https://github.com/hepcat72/split-seq-processing.git
+    cd split-seq-processing
+    perl Makefile.PL INSTALL_BASE=~
+    make
     make install
 
-Optional:
+Where `~` in the perl command causes the module to go into ~/lib.  Replace `~` with wherever you wish to install.
+
+Optional follow-up step:
 
     make clean
 
