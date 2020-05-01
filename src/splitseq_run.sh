@@ -41,15 +41,27 @@ if [ $# -gt 5 ]; then
 fi
 
 mkdir "${run_id}"
+cd "${run_id}"
+mkdir "${run_id}"
 
 split-seq all \
-    --fq1 "${mrna_fq}" \
-    --fq2 "${bcumi_fq}" \
+    --fq1 "../${mrna_fq}" \
+    --fq2 "../${bcumi_fq}" \
     --output_dir "${run_id}" \
     --chemistry "${chemistry}" \
-    --genome_dir "${ssrefdir}" \
+    --genome_dir "../${ssrefdir}" \
     --nthreads 16 \
     ${sample_args}
+
+for s in *DGE_{,un}filtered
+  do
+    sparse2dense.pl --verbose \
+        -i "$s/DGE.mtx" \
+        -g "$s/genes.csv" \
+        -c "$s/cell_metadata.csv" \
+        -a "../${ssrefdir}/genes.gtf" \
+        -o "$s/DGE.tsv"
+  done
 
 echo
 echo Done.

@@ -222,7 +222,9 @@ sub printDenseTSV
 
 BEGIN
   {
-    setScriptInfo(VERSION => '1.0',
+    our $VERSION = '0.1';
+
+    setScriptInfo(VERSION => $VERSION,
 		  CREATED => '4/28/2020',
 		  AUTHOR  => 'Robert William Leach',
 		  CONTACT => 'rleach@princeton.edu',

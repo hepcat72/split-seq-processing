@@ -30,6 +30,18 @@ split-seq combine \
     --genome_dir "${ssrefdir}" \
     --sample ${sample_wells}
 
+cd "${run_id}"
+
+for s in *DGE_{,un}filtered
+  do
+    sparse2dense.pl --verbose \
+        -i "$s/DGE.mtx" \
+        -g "$s/genes.csv" \
+        -c "$s/cell_metadata.csv" \
+        -a "../${ssrefdir}/genes.gtf" \
+        -o "$s/DGE.tsv"
+  done
+
 echo
 echo Done.
 echo "Output sample is located in:"
