@@ -1,0 +1,11 @@
+Chromosome	Source	Feature	Start	End	Score	Strand	Frame	Attributes
+hg38_1	ensembl_havana	gene	169662007	169854080	.	+	.	"gene_id ""ENSG00000000460""; gene_version ""16""; gene_name ""C1orf112""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_1	ensembl_havana	gene	169849631	169894267	.	-	.	"gene_id ""ENSG00000000457""; gene_version ""13""; gene_name ""SCYL3""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_1	ensembl_havana	gene	196651878	196747504	.	+	.	"gene_id ""ENSG00000000971""; gene_version ""15""; gene_name ""CFH""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_X	ensembl_havana	gene	100584802	100599885	.	+	.	"gene_id ""ENSG00000000005""; gene_version ""5""; gene_name ""TNMD""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_X	ensembl_havana	gene	100627109	100639991	.	-	.	"gene_id ""ENSG00000000003""; gene_version ""14""; gene_name ""TSPAN6""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_20	ensembl_havana	gene	50934867	50958555	.	-	.	"gene_id ""ENSG00000000419""; gene_version ""12""; gene_name ""DPM1""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_1	ensembl_havana	gene	24356999	24416934	.	-	.	"gene_id ""ENSG00000001460""; gene_version ""17""; gene_name ""STPG1""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_6	ensembl_havana	gene	41072945	41099976	.	+	.	"gene_id ""ENSG00000001167""; gene_version ""14""; gene_name ""NFYA""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_6	ensembl_havana	gene	53497341	53616970	.	-	.	"gene_id ""ENSG00000001084""; gene_version ""11""; gene_name ""GCLC""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
+hg38_6	ensembl_havana	gene	143494811	143511690	.	-	.	"gene_id ""ENSG00000001036""; gene_version ""13""; gene_name ""FUCA2""; gene_source ""ensembl_havana""; gene_biotype ""protein_coding"";"
