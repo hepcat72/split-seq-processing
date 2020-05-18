@@ -1,10 +1,8 @@
 ## Install necessary R packages (should only need to be done once) - uncomment to run
-#install.packages("tidyverse")
-#if (!requireNamespace("BiocManager", quietly = TRUE))
-#    install.packages("BiocManager")
+#list.of.packages <- c("dplyr","BiocManager","Seurat","patchwork")
+#new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+#if(length(new.packages)) install.packages(new.packages)
 #BiocManager::install(version = "3.10")
-#install.packages('Seurat')
-#install.packages('patchwork')
 
 # Load the libraries we will need
 library(dplyr)
